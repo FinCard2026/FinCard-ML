@@ -26,7 +26,6 @@ def generate_tags_and_reason_codes(
     category = policy.get("category", "")
     goal = user_profile.get("goal", "")
     selected_categories = user_profile.get("selected_categories", [])
-    literacy = user_profile.get("financial_literacy_level", "")
     housing_type = user_profile.get("housing_type", "")
     job_type = user_profile.get("job_type", "")
     profile_completeness = user_profile.get("profile_completeness_score", 1.0)
@@ -87,11 +86,6 @@ def generate_tags_and_reason_codes(
                 reason_codes.append("DEADLINE_SOON")
         except ValueError:
             pass
-
-    # 초보자 친화
-    if literacy == "beginner":
-        tags.append("초보자도 이해 쉬움")
-        reason_codes.append("BEGINNER_FRIENDLY")
 
     # 서류 확인 필요
     if policy.get("requires_income_proof") or category in ["housing", "asset_building"]:

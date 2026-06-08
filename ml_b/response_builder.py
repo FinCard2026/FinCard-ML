@@ -101,7 +101,6 @@ def build_response(
         "cluster_id": cluster_id,
         "cluster_name": cluster_meta.get("cluster_name", ""),
         "cluster_description": cluster_meta.get("cluster_description", ""),
-        "financial_literacy_level": user_profile.get("financial_literacy_level", ""),
         "profile_completeness_score": completeness,
         "top_category": top_category,
         "recommended_policy_count": len(candidate_policies),
