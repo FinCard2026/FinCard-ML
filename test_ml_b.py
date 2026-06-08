@@ -18,7 +18,6 @@ USER_PROFILE = {
     "is_job_seeker": False,
     "goal": "asset_building",
     "selected_categories": ["asset_building", "housing"],
-    "financial_literacy_level": "beginner",
     "point_balance": 120,
     "has_income_proof": True,
     "tax_reported": True,
